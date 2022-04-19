@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,500&family=Nanum+Myeongjo&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.contanier {
+    width: 100%;
+    max-width: 1200px; /* 그리드시스템 크기 */
+    margin: 0 auto;
+    padding: 0 10px; /* 첫 번째 그리드의 좌측 마진과 마지막 그리그의 우측 마진을 표현 */
+    /* background-color: bisque; */
+}
+
+.gnb {
+    display: none;
+}
+
+#hambungerButtone {
+
+}
+
+article {
+    width: 100%;
+}
+
+h2 {
+    font-size: 22px;
+    font-family: "montserrat";
+    color: #47aadc;
+}
+
+
+
+/*========== PC ==========*/
+@media screen and (min-width:1024px) {
+    /* header */
+    .gnb {
+        display: block;
+    }
