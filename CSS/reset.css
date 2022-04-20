@@ -27,9 +27,10 @@ h1 {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 30px;
     font-family: "montserrat";
-    color: #47aadc;
+    color: #3f51b5;
+    margin: 20px 20px;
 }
 
 h3 {

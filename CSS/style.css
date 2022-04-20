@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,500&family=Nanum+Myeongjo&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.contanier {
+.container {
     width: 100%;
     max-width: 1200px; /* 그리드시스템 크기 */
-    margin: 0 auto;
+    margin: 0;
     padding: 0 10px; /* 첫 번째 그리드의 좌측 마진과 마지막 그리그의 우측 마진을 표현 */
     /* background-color: bisque; */
+}
+
+.menu {
+    width: 100%;
+}
+
+nav {
+    margin: 20px 20px;
 }
 
 .gnb {
@@ -16,18 +24,60 @@
 
 }
 
-article {
+header article img {
     width: 100%;
 }
 
-h2 {
-    font-size: 22px;
-    font-family: "montserrat";
-    color: #47aadc;
+/* ===== main ===== */
+section {
+    margin: 30px 20px;
+}
+
+.flex-box {
+    text-align: center;
+}
+
+.WE-ARE p {
+    font: 18px "PT+Serif"
+}
+
+.WORK-imgLINE {
+    padding: 0;
+    margin: 0;
+}
+
+.WORK-imgLINE img {
+    width: 100%;
+}
+
+.main-intro figcaption {
+    margin: 10px;
+    color: #4f769b;
+}
+
+.blog-box {
+    text-align: left;
+}
+
+.blog-box img {
+    width: 100%;
+}
+
+.BLOG .date {
+    color: #a5a5a5;
+}
+
+.ID {
+    border-left: 0;
 }
 
 
 
+/* ===== footer ===== */
+footer h3 {
+    text-align: center;
+    padding: 20px;
+}
 /*========== PC ==========*/
 @media screen and (min-width:1024px) {
     /* header */
