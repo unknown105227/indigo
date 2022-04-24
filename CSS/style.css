@@ -1,178 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,500&family=Nanum+Myeongjo&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* PT+Serif, 코딩에선 PT Serif해야 먹힌다. ???? */
 .container {
     width: 100%;
-    max-width: 1200px; /* 그리드시스템 크기 */
-    margin: 0;
+    max-width: 1440px; /* 그리드시스템 크기 */
+    margin: 0 auto;
     padding: 0 10px; /* 첫 번째 그리드의 좌측 마진과 마지막 그리그의 우측 마진을 표현 */
     /* background-color: bisque; */
 }
 
+/* =====header===== */
 .menu {
     width: 100%;
 }
 
-nav {
-    margin: 20px 20px;
+.menu h1 {
+    float: left;
+    margin-top: 30px;
 }
 
-.gnb {
+nav {
+    margin: 20px 20px;
+    float: right;
+}
+
+.menu-title {
     display: none;
 }
 
-.hamburger[id="icon"] + label{
-    position: relative;
-    display:block;
-    width:60px;
-    height:40px;
-    cursor:pointer;  /* 커서를 올려놓을 때 모양이 바뀐다. */
-} 
-
-input[id="icon"] + label > span {
-    position: absolute;
-    display:block;
-    width:100%;
-    height:5px;
-    border-radius:30px;
-    background:#000;
-    transition: all 0.35s;  /* 진행되는 과정들을 천천히 보여줄 수 있다. 0.35초 동안 진행됨 */
-    z-index:2;
-
-}
-
-input[id="icon"] + label > span:nth-child(1) {
-    top:0px;
-}
-
-input[id="icon"] + label > span:nth-child(2) {
-    top:50%;
-    transform: translateY(-50%);  /* 엘리먼트를 변형할 때 쓴다. 비틀거나 구부리거나 돌릴 때 . 여러가지로 모양을 바꿀 때 */
-}
-
-input[id="icon"] + label > span:nth-child(3) {
-    bottom:0px;
-}
-
-
-input[id="icon"]:checked + label > span:nth-child(1) {
-    top:50%;
-    transform:translateY(-50%) rotate(45deg);
-}
-
-input[id="icon"]:checked + label > span:nth-child(2) {
-    opacity: 0;
-}
-
-input[id="icon"]:checked + label > span:nth-child(3) {
-    bottom:50%;
-    transform:translateY(50%) rotate(-45deg);
-}
-
-#icon + label + #header {
-    position:fixed;  /* 스크롤을 내리더라도 같은 위치에서 붙어다닌다. */
-    width:300px;
-    height:100%;
-    background:#333;
-    top:0px;
-    padding:60px 25px 25px 25px;
-    box-sizing:border-box;
-    left:-300px;
-    z-index:1;
-    transition: all 0.35s;
-}
-
-#icon:checked + label + #header {
-    left:0px;
-}
-
-#icon:checked + label + #header > ul > li > a {
-    color: white;
-
-}
-
-
-
-.menu-trigger {
-    margin-right: 70px;
-    margin-bottom: 50px;
-  }
-
-  .menu-trigger,
-  .menu-trigger span {
-    display: inline-block;
-    transition: all .4s;
-    box-sizing: border-box;
-  }
-  
-  .menu-trigger {
-    position: relative;
-    width: 50px;
-    height: 44px;
-  }
-  
-  .menu-trigger span {
-    position: absolute;
-    left: 0;
+article img {
     width: 100%;
-    height: 4px;
-    background-color: #fff;
-    border-radius: 4px;
-  }
-  
-  .menu-trigger span:nth-of-type(1) {
-    top: 0;
-  }
-  
-  .menu-trigger span:nth-of-type(2) {
-    top: 20px;
-  }
-  
-  .menu-trigger span:nth-of-type(3) {
-    bottom: 0;
-  }
-  
-  /* type-01 */
-  /* 중앙 라인이 고정된 자리에서 투명하게 사라지며 상하라인 회전하며 엑스자 만들기 */
-  .menu-trigger.active-1 span:nth-of-type(1) {
-    -webkit-transform: translateY (20px) rotate (-45deg);
-    transform: translateY(20px) rotate(-45deg);
-  }
-  
-  .menu-trigger.active-1 span:nth-of-type(2) {
-    opacity: 0;
-  }
-  
-  .menu-trigger.active-1 span:nth-of-type(3) {
-    -webkit-transform: translateY(-20px) rotate(45deg);
-    transform: translateY(-20px) rotate(45deg);
-  }
-  
-    
-header article img {
-    width: 100%;
+   /* height: 150px; */
 }
 
 /* ===== main ===== */
-section {
-    margin: 30px 20px;
+main {
+    margin-top: 20px;
 }
 
-.flex-box {
+section { 
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.flex-box{
+    display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
+/*  WE-ARE */
 .WE-ARE p {
-    font: 18px "PT+Serif"
+    font: 16px "PT Serif";
+    text-align: center;
+    line-height: 30px;
 }
 
-.WORK-imgLINE {
-    padding: 0;
-    margin: 0;
+/* main-category */
+.main-intro {
+    text-align: center;;
 }
 
-.WORK-imgLINE img {
-    width: 100%;
+.main-intro img {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.main-intro p {
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .main-intro figcaption {
@@ -180,49 +75,273 @@ section {
     color: #4f769b;
 }
 
+/* line1 */
+
+/* WORK */
+.wrapper {
+    display: grid;
+}
+
+.WORK-imgLine img {
+    width: 100%;
+    margin-bottom: -4px;
+    /* transition-duration: 2s; */
+    
+}
+
+.WORK-imgLine a {
+    position: relative;
+    width: 100%;
+    background-color: gray;
+}
+
+.WORK-imgLine a::before {
+    position: absolute;
+    /* left: 0%; top: 0%; */
+    display: block;
+    content: 'Running';
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    /* 포토샵의 레이어 개념으로 보면 된다. 높을수록 위로 */
+    opacity: 0;
+    transition: all 1s;
+    /* 이동의 중간과정을 보여주는 애니메이션 */
+    background-color: #3f51b5;
+    font-size: 50px;
+}
+/* a태그 글자 콘텐츠 선언 문제. 차일드로 해야할 듯. */
+
+.WORK-imgLine a:hover::before {
+    opacity: 0.7;
+    /* transform: translateX(-100%);  /* 이동 */  */
+}
+
+/* .WORK-imgLine img:hover {
+    color: red;
+    border: 1px solid red;
+    opacity: 0.6;
+    transition: opacity 2s;
+    z-index: 10;
+} */
+
+
+.wrapper-2 {
+    display: none;
+}
+
+/* line2 */
+.line2 hr {
+    width: 10%;
+    margin: auto;
+    background-color: #3f51b5;
+}
+
+/* BLOG */
 .blog-box {
-    text-align: left;
+    margin-top: 30px;
 }
 
 .blog-box img {
     width: 100%;
 }
 
-.BLOG .date {
+.blog-box .date {
+    font-size: 11px;
+    font-family: "Montserrat";
     color: #a5a5a5;
 }
 
-.ID {
-    width: 100%;
+.blog-box p {
+    font-size: 16px;
+    font-family: "Montserrat";
+}
+
+/* CONTACT */
+.addRess input {
+    color: #3f51b5;
+}
+
+.addRess input[placeholder] {
+    font-size: 12px;
+    font-family: "Montserrat";
+    color: #3f51b5;
+    /* 컬러가 안먹는다.. */
+}
+
+.addRess {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.addRess .ID {
+    margin-top: 40px;
 }
 
 .ID input {
+    width: 100%;
     border-top: 0;
     border-left: 0;
     border-right: 0;
+    border-bottom-color: #3f51b5;
 }
 
-#suggestion {
-    text-align: left;   
+.memo label {
+    font-size: 12px;
+    font-family: "Montserrat";
+    color: #3f51b5;
+}
+.memo textarea {
+    width: 100%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid #3f51b5;
 }
 
-
+.CONTACT .btn {
+    float: right;
+    width: 130px;
+    height: 50px;
+    margin-bottom: 30px;
+    cursor: pointer;;
+    background-color: #3f51b5;
+    color: #fff;
+    font-size: 12px;
+    font-family: "Montserrat";
+    border: 0;
+}
 
 /* ===== footer ===== */
+.map iframe {
+    width: 100%;
+}
+
 footer h3 {
     text-align: center;
     padding: 20px;
-}
+}    
 
+/*===== tablet ======*/
+@media screen and (min-width: 768px) {   
+    .flex-box{
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
-.memo {
-    margin-top: 50px;
-}
+    /* =====header===== */
+    .menu h1 {
+        position: absolute;
+        left: -10; top: -10px;
+        transform: translateY(0px);
+    }
 
-/*========== PC ==========*/
-@media screen and (min-width:1024px) {
-    /* header */
-    .gnb {
+    .hamBurgerBtn {
+        display: none;
+    }
+
+    .menu-title {
         display: block;
+    }
+
+    .gnb {
+        display: flex;
+    }
+    
+    .gnb li {
+        margin-right: 20px;
+    }
+
+    .gnb li>a {
+        font-size: 16px;
+        font-family: "Montserrat";
+        color: #3f51b5;
+        font: 16px #3f51b5  "Montserrat";
+        font-weight: 600;
+    }
+
+    /* ======main====== */
+    /* main-category */
+    .main-intro {
+        height: 50%;
+    }   
+
+    /* line1 */
+    .line1 {
+        display: none;
+    }
+
+    .box{
+        color:#fff;
+        font-weight:bold;
+        /* text-align:center; */
+    }   
+    
+    .wrapper{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(500px auto);
+    
+    }
+    
+    .box1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .box2 {
+        grid-column: 2;
+        grid-row: 1;
+        /* z-index: 10; */
+    }
+    .box3 {
+        grid-column: 1;
+        grid-row: 2;
+        /* z-index: 10; */
+    }
+    
+    .box4{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    .wrapper-2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(500px auto);
+    }
+    /* 그리드 레이아웃은 html 태그 구성에 매우 주의해야한다. 상호객체간의 상대적인 비율이 있다.. */
+
+    .box5{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .box6{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .box7{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .box8{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    /* BLOG */
+    .blog-box {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    /* CONTACT */
+    .addRess {
+        width: 100%;
     }
 }
